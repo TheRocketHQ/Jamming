@@ -26,6 +26,13 @@ const Spotify = {
         window.location = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectUri}`;
       }
     }
+  }
+  searchSpotify(searchQuery){
+    return fetch(`https://api.spotify.com/v1/search?q=${searchQuery}&type=track`),
+    {
+      
+    }
+  }
 }
 
 export default Spotify;
